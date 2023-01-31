@@ -1,14 +1,4 @@
-
-import React, { useState, useEffect } from "react";
-import { tasks as data } from './tasks'
-
-export default function TaskList() {
-
-   const [tasks, setTasks] = useState([])
-
-   useEffect(()=>{
-      setTasks(data)
-   }, [])
+export default function TaskList({tasks}) {
 
    if (tasks.length === 0){
       return <h1>No hay tareas aún</h1>;
